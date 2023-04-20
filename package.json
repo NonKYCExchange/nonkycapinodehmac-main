@@ -1,0 +1,16 @@
+{
+  "name": "apitester2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "indexhmac.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "node-fetch": "^2.6.7",
+    "readline-sync": "^1.4.10"
+  }
+}
