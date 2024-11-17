@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const readlineSync = require('readline-sync');
 const CryptoJS = require("crypto-js");
 
-const baseUrl = 'https://nonkyc.io/api/v2';
+const baseUrl = 'https://api.nonkyc.io/api/v2';
 
 var nonkycApi = function(apiKey, apiSecret) {
   this.apiKey = apiKey;
@@ -257,7 +257,7 @@ nonkycApi.prototype.balances = function() {
 
 nonkycApi.prototype.createOrder = function(symbol, side, quantity, price, type = 'limit', userProvidedId = null, strictValidate = false) {
     let url = new URL(baseUrl+'/createorder');
-    let body = {}
+    let body = {
 	  "userProvidedId": userProvidedId,
 	  "symbol": symbol,
 	  "side": side,
